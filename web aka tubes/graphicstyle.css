@@ -1,0 +1,31 @@
+/* Body styling */
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: #f4f6f8;
+  margin: 0;
+  padding: 0;
+}
+
+/* Container untuk grafik */
+.container {
+  background: white;
+  margin: 40px auto;
+  padding: 30px;
+  width: 500px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+h2 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+/* Styling untuk canvas grafik */
+canvas {
+  margin-top: 20px;
+  background-color: #ecf5ff;
+  border-radius: 8px;
+  padding: 20px;
+}
