@@ -1,0 +1,19 @@
+.grid-container {
+    display: grid; /* Menggunakan Grid */
+    /* Membuat 2 kolom dengan lebar relatif yang sama (1fr 1fr) */
+    grid-template-columns: 1fr 1fr;
+    gap: 20px; /* Jarak antar kolom */
+    height: 100vh; /* Menjamin container setinggi layar penuh */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.kolom-grid {
+    padding: 20px;
+    background-color: #f1f1f1;
+}
+
+/* Tambahkan warna berbeda jika perlu */
+.kolom-grid:first-child {
+    background-color: #ddd;
+}
