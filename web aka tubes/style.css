@@ -1,131 +1,137 @@
-body {
-  font-family: "Segoe UI", sans-serif;
-  background: #f4f6f8;
-  margin: 0;
-  padding: 0;
+/* Menggunakan font dari Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root {
+    --primary: #4361ee;
+    --secondary: #3f37c9;
+    --accent: #4cc9f0;
+    --success: #2ecc71;
+    --bg: #f8f9fa;
+    --text: #2b2d42;
+    --glass: rgba(255, 255, 255, 0.8);
 }
 
-/* HEADER */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
+    color: var(--text);
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* Header & Nav */
 header {
-  background-color: #3498db;
-  color: white;
-  padding: 20px;
-  text-align: center;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    background: var(--primary);
+    color: white;
+    padding: 2rem 1rem;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-weight: 700;
+    letter-spacing: -1px;
 }
 
 nav {
-  margin-top: 10px;
+    background: white;
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
 
 nav a {
-  color: white;
-  text-decoration: none;
-  margin: 0 10px;
-  padding: 6px 10px;
-  border-radius: 4px;
-  transition: background 0.3s;
+    color: var(--text);
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: color 0.3s;
 }
 
 nav a:hover {
-  background: rgba(255,255,255,0.3);
+    color: var(--primary);
 }
 
-/* KONTEN */
-.container {
-  background: white;
-  margin: 40px auto;
-  padding: 30px;
-  width: 500px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+/* Layout Utama */
+.main-content {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 2rem;
+}
+
+@media (max-width: 992px) {
+    .main-content { grid-template-columns: 1fr; }
+}
+
+.left-section, .right-section {
+    background: var(--glass);
+    backdrop-filter: blur(10px);
+    padding: 2.5rem;
+    border-radius: 20px;
+    border: 1px solid rgba(255,255,255,0.3);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
 }
 
 h2 {
-  text-align: center;
-  color: #2c3e50;
-  margin-bottom: 20px;
+    color: var(--primary);
+    font-weight: 700;
+    margin-top: 0;
 }
 
-label {
-  font-weight: 600;
-  display: block;
-  margin-top: 10px;
+h3 { color: var(--secondary); }
+
+p { font-size: 0.95rem; color: #4a4e69; }
+
+/* Refrensi Box */
+.reference-box {
+    background: rgba(67, 97, 238, 0.05);
+    padding: 1.5rem;
+    border-left: 5px solid var(--primary);
+    border-radius: 8px;
+    margin-top: 2rem;
 }
 
-input, textarea {
-  width: 100%;
-  padding: 10px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-  margin-top: 5px;
-  margin-bottom: 15px;
-  font-size: 14px;
-  resize: none;
+/* Tombol */
+.bottom-button-container {
+    text-align: center;
+    margin: 4rem 0;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
 }
 
-button {
-  background-color: #3498db;
-  color: white;
-  border: none;
-  padding: 10px;
-  border-radius: 6px;
-  cursor: pointer;
-  width: 100%;
-  font-size: 16px;
-  font-weight: 600;
+.bottom-button {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    color: white;
+    background: var(--primary);
+    box-shadow: 0 10px 20px rgba(67, 97, 238, 0.2);
+    transition: all 0.3s ease;
 }
 
-button:hover {
-  background-color: #2980b9;
+.bottom-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 25px rgba(67, 97, 238, 0.3);
+    background: var(--secondary);
 }
 
-/* TABEL HASIL */
-.result {
-  margin-top: 30px;
+.btn-secondary {
+    background: var(--success);
+    box-shadow: 0 10px 20px rgba(46, 204, 113, 0.2);
 }
 
-table {
-  width: 100%;
-  border-collapse: collapse;
-  text-align: center;
-}
-
-th, td {
-  border: 1px solid #ddd;
-  padding: 8px;
-}
-
-th {
-  background: #3498db;
-  color: white;
-}
-
-.found {
-  color: green;
-  font-weight: 600;
-}
-
-.not-found {
-  color: red;
-  font-weight: 600;
-}
-
-/* FOOTER */
-footer {
-  text-align: center;
-  padding: 15px;
-  background: #2c3e50;
-  color: white;
-  font-size: 14px;
-  margin-top: 40px;
-}
-
-.info {
-  background: #ecf5ff;
-  padding: 10px;
-  border-radius: 6px;
-  margin-top: 20px;
-  color: #333;
-  font-size: 14px;
+.btn-secondary:hover {
+    background: #27ae60;
 }
