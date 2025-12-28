@@ -1,42 +1,63 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Beranda | Analisis Efisiensi Algoritma</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analisis Algoritma | Home</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <div id="header"></div>
+    <header>
+        <h1>Analisis Efisiensi Algoritma</h1>
+    </header>
 
-  <div class="container">
-    <h2>Analisis Efisiensi Algoritma Iteratif dan Rekursif</h2>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="analisis.html">Analisis Algoritma</a>
+        <a href="graphic.html">Grafik Analisis</a>
+        <a href="contact.html">Kontak</a>
+    </nav>
 
-    <label>Masukkan Data (pisahkan dengan koma): </label>
-    <input type="text" id="data" placeholder="contoh: 2, 4, 6, 8, 10" />
+    <main class="main-content">
+        <section class="left-section">
+            <h2>Deskripsi Website</h2>
+            <p>Website ini dirancang untuk membandingkan performa antara metode <strong>Iteratif</strong> dan <strong>Rekursif</strong>. Melalui analisis waktu eksekusi yang presisi, pengguna dapat memahami kapan harus menggunakan pengulangan standar atau pemanggilan fungsi diri sendiri.</p>
+            
+            <p>Fitur utama meliputi input data kustom, pengukuran waktu menggunakan <code>performance.now()</code>, serta visualisasi data interaktif menggunakan <strong>Chart.js</strong>.</p>
 
-    <label>Masukkan Elemen yang Dicari: </label>
-    <input type="number" id="target" placeholder="contoh: 8" />
+            <div class="reference-box">
+                <h3>Referensi & Teknologi</h3>
+                <p><strong>Teknologi:</strong> HTML5, CSS3 Modern, JavaScript (ES6).</p>
+                <p><strong>Library:</strong> Chart.js untuk visualisasi data.</p>
+                <p><strong>Dokumentasi:</strong> <a href="https://developer.mozilla.org" target="_blank">MDN Web Docs</a></p>
+            </div>
+        </section>
 
-    <button onclick="analisis()">Analisis Efisiensi</button>
+        <section class="right-section">
+            <h2>Konsep Dasar</h2>
+            
+            <h3>Algoritma Iteratif</h3>
+            <p>Menggunakan perulangan (loop) seperti <code>for</code> atau <code>while</code>. Lebih hemat memori karena tidak menambah beban pada <em>stack</em> pemanggilan fungsi.</p>
 
-    <div class="result" id="result"></div>
+            <h3>Algoritma Rekursif</h3>
+            <p>Memecahkan masalah dengan memanggil dirinya sendiri. Lebih elegan untuk struktur data kompleks seperti Tree, namun berisiko <em>Stack Overflow</em> jika terlalu dalam.</p>
 
-    <div class="info">
-      <strong>Penjelasan: </strong><br>
-      Algoritma <b>iteratif</b> menggunakan perulangan, sedangkan <b>rekursif</b> memanggil dirinya sendiri hingga elemen ditemukan.
-      Analisis ini membandingkan kecepatan eksekusi kedua metode.
+            
+
+            <h3>Perbandingan Performa</h3>
+            <p>Secara umum, Iteratif memiliki kecepatan yang sedikit lebih unggul pada operasi sederhana, sedangkan Rekursif menawarkan kemudahan penulisan kode pada masalah yang bersifat hierarkis.</p>
+        </section>
+    </main>
+
+    <div class="bottom-button-container">
+        <a href="analisis.html" class="bottom-button">Mulai Analisis</a>
+        <a href="graphic.html" class="bottom-button btn-secondary">Lihat Grafik</a>
     </div>
-  </div>
 
-  <div id="footer"></div>
-
-  <script src="script.js"></script>
-  <script>
-    fetch("header.html").then(r => r.text()).then(t => document.getElementById("header").innerHTML = t);
-    fetch("footer.html").then(r => r.text()).then(t => document.getElementById("footer").innerHTML = t);
-  </script>
-
+    <script src="script.js"></script>
+<footer>  
+  <p>© 2025 Tokiooferius</p>
+</footer>   
 </body>
 </html>
