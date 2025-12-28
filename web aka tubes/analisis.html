@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Analisis | Efisiensi Algoritma</title>
+  <link rel="stylesheet" href="style2.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+  <div id="header"></div>
+
+  <div class="container">
+    <h2>Analisis Efisiensi Algoritma</h2>
+
+    <label>Masukkan Data (pisahkan dengan koma): </label>
+    <input type="text" id="manualArray" placeholder="contoh: 10, 20, 30, 40, 50" />
+
+    <label>Masukkan Nilai n (untuk Generate Otomatis): </label>
+    <input type="number" id="nValue" placeholder="Contoh: 100" />
+
+    <div style="display: flex; gap: 10px;">
+        <button id="useManualInput">Gunakan Input Manual</button>
+        <button id="generateData" style="background-color: #2ecc71;">Generate & Analisis</button>
+    </div>
+
+    <div class="info" style="margin-top: 15px;">
+        <strong>Data yang diproses:</strong>
+        <p id="generatedNumbers" style="word-break: break-all; font-style: italic;">-</p>
+    </div>
+
+    <div class="result">
+        <table id="resultTable">
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Jumlah Data</th>
+                    <th>Iteratif (ms)</th>
+                    <th>Rekursif (ms)</th>
+                </tr>
+            </thead>
+            <tbody>
+                </tbody>
+        </table>
+    </div>
+
+    <div style="margin-top: 20px;">
+        <canvas id="executionChart"></canvas>
+    </div>
+  </div>
+
+  <div id="footer"></div>
+
+  <script src="script.js"></script>
+  <script>
+    fetch("header.html").then(r => r.text()).then(t => {
+        if(document.getElementById("header")) document.getElementById("header").innerHTML = t;
+    });
+    fetch("footer.html").then(r => r.text()).then(t => {
+        if(document.getElementById("footer")) document.getElementById("footer").innerHTML = t;
+    });
+  </script>
+</body>
+</html>
