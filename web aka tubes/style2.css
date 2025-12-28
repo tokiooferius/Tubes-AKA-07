@@ -1,0 +1,127 @@
+body {
+    font-family: "Segoe UI", sans-serif;
+    background: #f4f6f8;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    background: white;
+    margin: 20px auto;
+    padding: 30px;
+    max-width: 800px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+h2 {
+    text-align: center;
+    color: #2c3e50;
+}
+
+label {
+    font-weight: 600;
+    display: block;
+    margin-top: 15px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    margin-top: 5px;
+    box-sizing: border-box;
+}
+
+.button-group {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+button {
+    background-color: #5858eb;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #3b3be0;
+}
+
+.info {
+    background: #ecf5ff;
+    padding: 15px;
+    border-radius: 6px;
+    margin-top: 20px;
+    font-size: 13px;
+    overflow-wrap: break-word;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background: #56e1e9;
+    color: white;
+}
+
+.chart-container {
+    margin-top: 30px;
+    position: relative;
+    height: 300px;
+    width: 100%;
+}
+
+canvas {
+    background: #fff;
+    border: 1px solid #eee;
+    display: block !important; /* Memastikan grafik muncul */
+}
+
+body { font-family: 'Segoe UI', Arial, sans-serif; background: #f0f2f5; margin: 0; }
+header { background: #3498db; color: white; padding: 20px; text-align: center; }
+nav { background: #2c3e50; padding: 10px; text-align: center; }
+nav a { color: white; text-decoration: none; margin: 0 15px; font-weight: bold; }
+nav a:hover { color: #3498db; }
+
+.container { max-width: 1100px; margin: 30px auto; padding: 20px; }
+
+/* Grid Layout untuk Grafik */
+.grid-layout { display: grid; grid-template-columns: 1fr 2fr; gap: 20px; }
+@media (max-width: 850px) { .grid-layout { grid-template-columns: 1fr; } }
+
+.card { background: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+h3 { margin-top: 0; color: #2c3e50; border-bottom: 2px solid #eee; padding-bottom: 10px; }
+
+input { width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ddd; border-radius: 5px; box-sizing: border-box; }
+button { width: 100%; padding: 12px; border: none; border-radius: 5px; cursor: pointer; font-weight: bold; color: white; margin-bottom: 10px; transition: 0.3s; }
+button:hover { opacity: 0.8; transform: translateY(-2px); }
+
+#generateData { background: #2ecc71; }
+#useManualInput { background: #3498db; }
+
+#generatedNumbers { background: #f9f9f9; padding: 10px; border-radius: 5px; font-size: 12px; height: 60px; overflow-y: auto; border: 1px solid #eee; margin-bottom: 20px; }
+
+table { width: 100%; border-collapse: collapse; font-size: 13px; }
+th, td { border: 1px solid #eee; padding: 10px; text-align: center; }
+th { background: #3498db; color: white; }
+
+.chart-wrapper { height: 400px; position: relative; }
