@@ -1,39 +1,47 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kontak | Analisis Efisiensi Algoritma</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="contactstyle.css" />
 </head>
 <body>
 
-  <div id="header"></div>
+  <!-- Header -->
+  <header>
+    <h1>Kontak Kami</h1>
+  </header>
 
-  <div class="container">
-    <h2>Hubungi Kami</h2>
-    <p>Jika ada pertanyaan atau saran, silakan isi form di bawah ini.</p>
+  <!-- Navbar -->
+  <nav>
+    <a href="home.html">Beranda</a>
+    <a href="analisis.html">Analisis Algoritma</a>
+    <a href="graphic.html">Grafik Analisis</a>
+    <a href="contact.html">Kontak</a> <!-- Link ke halaman Kontak -->
+  </nav>
 
-    <form onsubmit="event.preventDefault(); alert('Pesan berhasil dikirim!');">
-      <label>Nama Lengkap:</label>
-      <input type="text" placeholder="Masukkan nama Anda" required>
+  <!-- Main Content: Form Kontak -->
+  <div class="main-content">
+    <div class="contact-form">
+      <h2>Hubungi Kami</h2>
+      <form id="contactForm">
+        <label for="name">Nama Anda:</label>
+        <input type="text" id="name" name="name" required placeholder="Masukkan nama Anda">
 
-      <label>Email:</label>
-      <input type="email" placeholder="Masukkan email Anda" required>
+        <label for="email">Email Anda:</label>
+        <input type="email" id="email" name="email" required placeholder="Masukkan email Anda">
 
-      <label>Pesan:</label>
-      <textarea placeholder="Tulis pesan Anda..." rows="4" required></textarea>
+        <label for="message">Pesan Anda:</label>
+        <textarea id="message" name="message" required placeholder="Masukkan pesan Anda"></textarea>
 
-      <button type="submit">Kirim Pesan</button>
-    </form>
+        <button type="submit">Kirim Pesan</button>
+      </form>
+    </div>
   </div>
 
-  <div id="footer"></div>
-
-  <script>
-    fetch("header.html").then(r => r.text()).then(t => document.getElementById("header").innerHTML = t);
-    fetch("footer.html").then(r => r.text()).then(t => document.getElementById("footer").innerHTML = t);
-  </script>
+  <!-- JavaScript untuk menangani pengiriman form -->
+  <script src="contactscript.js"></script>
 
 </body>
 </html>
